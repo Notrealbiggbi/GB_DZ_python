@@ -19,4 +19,4 @@ def Range(x1, y1, x2, y2):
     return range_z
 
 result = Range(num1, num2, num3, num4)
-print(f"A({num1},{num2}): B({num3},{num4})-> {round(result, 3)}")
+print(f"A({num1},{num2}): B({num3},{num4}) -> {round(result, 3)}")
