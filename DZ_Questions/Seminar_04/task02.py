@@ -6,11 +6,9 @@
 # max_val = 100
 # x = int(input('Введите натуральную степень x: '))
 # y = int(input('Введите натуральную степень y: '))
-# result = polynomial(x)
-# result = str(result)
-# print(f'{result} = 0')
+# result1 = polynomial(x)
+# print(f'{result1} = 0')
 # result2 = polynomial(y)
-# result2 = str(result2)
 # print(f'{result2} = 0')
 #
 # poly1 = open('poly1.txt', 'w', encoding='UTF-8')
@@ -25,10 +23,10 @@
 
 with open('poly1.txt', 'r', encoding='UTF-8') as text:
     my_file1 = text.readline()
-    my_file1 = str(my_file1)
+
 with open('poly2.txt', 'r', encoding='UTF-8') as text:
     my_file2 = text.readline()
-    my_file2 = str(my_file2)
+
 
 def remake(equ):
     dicktequ = {}
@@ -56,9 +54,31 @@ def sumequ(dict1, dict2):
              dictres[i] = (f if f != None else 0) + (s if s != None else 0)
     return dictres
 
+def cef_res(dict_f):
+    result = ''
+    for i in dict_f.items():
+        if result == '':
+            if i[1] < 0:
+                result += ' - ' + str(abs(i[1])) + 'x^' + str(abs(i[0]))
+            elif i[1] > 0:
+                result += str(abs(i[1])) + 'x^' + str(abs(i[0]))
+        else:
+            if i[1] < 0:
+                result += ' - ' + str(abs(i[1])) + 'x^' + str(abs(i[0]))
+            elif i[1] > 0:
+                result += ' + ' + str(abs(i[1])) + 'x^' + str(abs(i[0]))
+            result = result.replace('x^1', 'x').replace('x^0', '').replace('1x^', 'x^')
+    return result + ' = 0'
+
+
 dict_fin = sumequ(res, res2)
-dict_fin = str(dict_fin)
+# dict_fin = str(dict_fin)
 print(dict_fin)
 
+dict_final = cef_res(dict_fin)
+print(dict_final)
+
 poly = open('poly3.txt', 'w', encoding='UTF-8')
-poly.write(dict_fin)
+poly.write(dict_final)
+
+
