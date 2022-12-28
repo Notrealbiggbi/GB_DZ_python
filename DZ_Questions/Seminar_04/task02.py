@@ -1,7 +1,7 @@
 # Даны два файла, в каждом из которых находится запись многочлена.
 # Задача - сформировать файл, содержащий сумму многочленов.
 
-
+#
 # from task01 import polynomial
 # max_val = 100
 # x = int(input('Введите натуральную степень x: '))
@@ -12,7 +12,7 @@
 # print(f'{result2} = 0')
 #
 # poly1 = open('poly1.txt', 'w', encoding='UTF-8')
-# poly1.write(f'{result} = 0')
+# poly1.write(f'{result1} = 0')
 #
 # poly2 = open('poly2.txt', 'w', encoding='UTF-8')
 # poly2.write(f'{result2} = 0')
