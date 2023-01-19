@@ -5,7 +5,6 @@
 
 from random import randint
 
-
 max_val = 100
 # x = int(input('Введите натуральную степень k: '))
 
