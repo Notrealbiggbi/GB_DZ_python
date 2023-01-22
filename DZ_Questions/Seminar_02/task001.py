@@ -3,7 +3,7 @@
 # 6782 -> 23
 # 0,56 -> 11
 
-number = float(input('Введите число '))
+# number = float(input('Введите число '))
 
 def Sum_dig(n):
     n = abs(n)
@@ -13,5 +13,5 @@ def Sum_dig(n):
         n //= 10
     return sum
 
-result = Sum_dig(number)
-print(int(result))
+# result = Sum_dig(number)
+# print(int(result))

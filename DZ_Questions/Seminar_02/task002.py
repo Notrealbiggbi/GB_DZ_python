@@ -6,9 +6,9 @@
 
 number = abs(int(input('Введите число ')))
 
-my_list = []
-for i in range(1, number + 1):
-    my_list.append(round((1+1/i)**i, 2))
+my_list = [round((1+1/i)**i, 2) for i in range(1, number + 1)]
+# for i in range(1, number + 1):
+#     my_list.append(round((1+1/i)**i, 2))
 
 print(f"Для number = {number} -> {my_list}")
 
