@@ -14,8 +14,10 @@ def main_menu() -> int:
     for i in range(len(menu_list)):
         print(f'\t{i+1}. {menu_list[i]}')
     user_input = int(input('Введи команду:> '))
-    # TODO: сделать валидацию
-    return user_input
+    if user_input > len(menu_list):
+        print('Такого пункта в меню нет! Будьте внемательней')
+    else:
+        return user_input
 
 
 def show_all(db: list):
@@ -85,14 +87,17 @@ def find_contact(db: list):
     print(' ')
     find_id = int(input("Введите цифру id контакта:"))
     print(" ")
-    for i in range(len(db)):
-        if find_id == i+1:
-            find_cont = db[i]
-            print(f'\t{find_id}', end='. ')
-            for v in db[i].values():
-                print(f'{v}', end=' ')
-            print(' ')
-            break
+    if find_id > len(db):
+        print('В файле нет контакта под таким номером! Попробуйте найти контакт ещё раз')
+    else:
+        for i in range(len(db)):
+            if find_id == i+1:
+                find_cont = db[i]
+                print(f'\t{find_id}', end='. ')
+                for v in db[i].values():
+                    print(f'{v}', end=' ')
+                print(' ')
+                break
 
 
 def change_contact(db: dict):
