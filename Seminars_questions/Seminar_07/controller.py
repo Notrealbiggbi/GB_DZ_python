@@ -17,6 +17,7 @@ def input_handler(inp: int):
             view.find_contact(model.db_list)
             view.change_contact(model.db_list)
         case 6:
+            view.find_contact(model.db_list)
             view.delete_more(model.db_list)
         case 7:
             view.find_contact(model.db_list)
