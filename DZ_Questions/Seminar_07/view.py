@@ -85,7 +85,7 @@ def save_contact(new_dict: dict):
 def find_contact(db: list):
     global find_cont
     print(' ')
-    find_id = int(input("Введите цифру id контакта:"))
+    find_id = int(input("Введите цифру id контакта: "))
     print(" ")
     if find_id > len(db):
         print('В файле нет контакта под таким номером! Попробуйте найти контакт ещё раз')
@@ -102,20 +102,25 @@ def find_contact(db: list):
 
 def change_contact(db: dict):
     global find_cont
-    change_cont = int(input('Что в контакте вы хотите изменить?: '))
+    change_cont = int(input('Что в контакте вы хотите изменить?'
+                            '1. Фамилию'
+                            '2. Имя'
+                            '3. Телефон'
+                            '4. Коментарий '
+                            'Введите цифру: '))
     if change_cont == 1:
-        p = input('введите фамилию')
+        p = input('Введите фамилию: ')
         find_cont['lastname'] = p
     elif change_cont == 2:
-        z = input('введите имя')
+        z = input('Введите имя: ')
         find_cont['firstname'] = z
     elif change_cont == 3:
-        d = input('введите телефон')
+        d = input('Введите телефон: ')
         find_cont['phone'] = d
     elif change_cont == 4:
-        b = input('введите комментарий')
+        b = input('Введите комментарий: ')
         find_cont['comment'] = b
-    print("Контакт изменён, не забудте сохранить изменения")
+    print("Контакт изменён, не забудте сохранить изменения!!")
     return find_cont
 
 
