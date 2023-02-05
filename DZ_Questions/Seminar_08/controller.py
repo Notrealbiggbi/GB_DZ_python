@@ -12,12 +12,11 @@ cop2 = pf2.file_read()
 def input_my_class(inp: int):
     match inp:
         case 1:
-            view.show(cop)
-            view.show(cop2)
+            view.class_search(cop, cop2)
         case 2:
             view.name_serch(cop, cop2)
         case 3:
-            test.class_marks()
+            pass
         case 4:
             view.exit_programm()
 
