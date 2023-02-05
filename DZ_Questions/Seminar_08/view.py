@@ -30,10 +30,10 @@ def show(my_list: list):
 
 
 def class_search(cop, cop2):
-    find = int(input('Учеников какого класса вы хотите найти?: '))
-    if find == 1:
+    find = input('Учеников какого класса вы хотите найти?: ')
+    if find == '5A':
         show(cop)
-    elif find == 2:
+    elif find == '6B':
         show(cop2)
     else:
         print('Вы ошиблись! Попробуйте найти класс снова.')
