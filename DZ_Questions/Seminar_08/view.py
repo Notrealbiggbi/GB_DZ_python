@@ -1,7 +1,12 @@
 import test
 
 
-
+class_names = ['1А', '1Б', '1В', '1Г',
+               '2А', '2Б', '2В', '2Г',
+               '3А', '3Б', '3В', '3Г',
+               '4А', '4Б', '4В', '4Г',
+               '5А', '5Б', '5В', '5Г',
+               '6А', '6Б', '6В', '6Г']
 
 def main_menu() -> int:
     print('Главное меню')
@@ -30,10 +35,11 @@ def show(my_list: list):
 
 
 def class_search(cop, cop2):
+    global class_names
     find = input('Учеников какого класса вы хотите найти?: ')
-    if find == '5A':
+    if find == class_names[16]:
         show(cop)
-    elif find == '6B':
+    elif find == class_names[22]:
         show(cop2)
     else:
         print('Вы ошиблись! Попробуйте найти класс снова.')
@@ -42,10 +48,10 @@ def class_search(cop, cop2):
 def name_serch(cop, cop2):
     name = input('Введите название класса: ')
 
-    if name == '5A':
+    if name == class_names[16]:
         print(show(cop))
         print(test.class_marks2())
-    elif name == '6B':
+    elif name == class_names[22]:
         print(show(cop2))
         print(test.class_marks())
     else:
