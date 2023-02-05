@@ -18,6 +18,11 @@ class Read:
         return self.db_list
 
 
+new_db_list = Read('5A.txt')
+new_db_list2 = Read('6B.txt')
+
+cop = new_db_list.file_read()
+cop2 = new_db_list2.file_read()
 
 
 

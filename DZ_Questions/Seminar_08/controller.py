@@ -1,20 +1,16 @@
-from database import Read
-import test
-
+import database
 import view
 
-pf = Read('5A.txt')
-pf2 = Read('6B.txt')
-cop = pf.file_read()
-cop2 = pf2.file_read()
+
+
 
 
 def input_my_class(inp: int):
     match inp:
         case 1:
-            view.class_search(cop, cop2)
+            view.class_search(database.cop, database.cop2)
         case 2:
-            view.name_serch(cop, cop2)
+            view.name_serch(database.cop, database.cop2)
         case 3:
             pass
         case 4:
