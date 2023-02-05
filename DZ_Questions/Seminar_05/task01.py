@@ -84,7 +84,7 @@ def player_turn():
     print(f"Твой ход. Конфет {my_candy}")
     take_candy = int(input("Сколько конфет возьмёшь?: "))
     while take_candy > 28 or take_candy < 0 or take_candy > my_candy:
-        take_candy = int(input("Слишком ного взял. Сколько конфет возьмёшь? "))
+        take_candy = int(input("Слишком много взял. Сколько конфет возьмёшь? "))
     my_candy -= take_candy
     player_candy += take_candy
     if my_candy > 0:
