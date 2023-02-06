@@ -2,9 +2,6 @@ import database
 import view
 
 
-
-
-
 def input_my_class(inp: int):
     match inp:
         case 1:
