@@ -1,5 +1,4 @@
-import test
-
+from DZ_Questions.Seminar_08.My_variant import test
 
 class_names = ['1А', '1Б', '1В', '1Г',
                '2А', '2Б', '2В', '2Г',
