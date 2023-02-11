@@ -13,3 +13,12 @@ def what_mark():
 def list_of_child(journal: dict):
     for i, child in enumerate(journal, 1):
         print(f'{i}. {child:20} {journal.get(child)}')
+
+def no_class():
+    return print('Такого класса нет!')
+
+def start_lesson():
+    return input('Начнём урок? ')
+
+def close_lesson():
+    return print('Урок закончен!!')
